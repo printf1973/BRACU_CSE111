@@ -4,17 +4,18 @@ public class Reader {
     public String[] books;
     public int count;
 
-    public Reader(String name) {
-        this.name = name;
-        this.books = new String[this.capacity];
-        System.out.println("A new reader is created!");
-    }
-
     public Reader(String name, int capacity) {
         this.name = name;
         this.capacity = capacity;
         this.books = new String[capacity];
         System.out.println("A new reader is created!");
+    }
+
+    public Reader(String name) {
+        this(name, 2);
+        // this.name = name;
+        // this.books = new String[this.capacity];
+        // System.out.println("A new reader is created!");
     }
 
     public void readerInfo() {
@@ -23,21 +24,19 @@ public class Reader {
         System.out.println("Books: ");
         if (count == 0) {
             System.out.println("No books added yet");
+            return;
         }
-        else {
-            for (int i = 0; i < count; i++) {
-                System.out.println("Book " + (i+1) + ": " + books[i]);
-            }
+        for (int i = 0; i < count; i++) {
+            System.out.println("Book " + (i + 1) + ": " + books[i]);
         }
     }
 
     public void addBook(String book) {
         if (count < capacity) {
             books[count++] = book;
+            return;
         }
-        else {
-            System.out.println("No more capacity");
-        }
+        System.out.println("No more capacity");
     }
 
     public void updateCapacity(int capacity) {
