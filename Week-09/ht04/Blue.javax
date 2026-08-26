@@ -1,0 +1,10 @@
+public class Blue {
+    public void method1() {
+        System.out.println("blue 1");
+        method3();
+    }
+
+    public void method3() {
+        System.out.println("blue 3");
+    }
+}

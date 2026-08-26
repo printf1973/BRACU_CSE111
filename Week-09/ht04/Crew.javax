@@ -1,0 +1,9 @@
+public class Crew extends Moo {
+    public void method1() {
+        System.out.println("crew 1");
+    }
+
+    public void method3() {
+        System.out.println("crew 3");
+    }
+}

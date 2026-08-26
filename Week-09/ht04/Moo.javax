@@ -1,0 +1,11 @@
+public class Moo extends Blue {
+    public void method2() {
+        super.method3();
+        System.out.println("moo 2");
+        this.method3();
+    }
+
+    public void method3() {
+        System.out.println("moo 3");
+    }
+}
